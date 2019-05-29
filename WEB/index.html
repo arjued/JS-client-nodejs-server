@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="app.js"></script>
+    
+    <style>p {
+        border-style: dashed;
+        border-width: 1px;
+        border-left-width: 1px;
+        border-right-width: 1px;
+        border-color: rgb(224, 189, 189)(247, 247, 247);
+        width: 400px;
+    }</style>
+</head>
+
+<body style="align-content: center ">
+    <center>
+        <h1 class=”display-4">Chat</h1>
+        <br>
+        <h3 id="loginId" class=”display-2"></h3>
+        <!-- <var>id</var> -->
+        <br>
+        <div>
+            <p align="left" id="test" ></p>
+        </div>
+        <br>
+        <div class=”container”>
+            <br>
+            <div class=”jumbotron”>
+                <textarea id="message" class="form-control" placeholder='Your Message Here'></textarea>
+                <br>
+                <button id=”send” class=”btn btn-success” onclick='sendMessage(logid, connId)'>Send</button>
+            </div>
+            <div id=”messages”>
+            </div>
+        </div>
+    </center>
+    <script src="./htmlscripts.js">
+        </script>
+</body>
+
+</html>
