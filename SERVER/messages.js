@@ -1,6 +1,5 @@
 async function getMessage(request, response, db) {
     let obj = request.body;
-
     db.query(`SELECT message, sender FROM (select m.id, m.message, m.sender from messages m inner join chatroom c on m.connId = c.connId where c.users like '%${obj["loginId"]}%' order by id desc LIMIT 15) sub ORDER BY id`, function (error, results) {
         if (error) {
             console.log(`Error in database operation`)
@@ -27,7 +26,7 @@ async function newRequirement(request, response, db) {
     let obj = request.body;
     var hash
     var list = []
-    db.query(`select loginId from users where tool like '%${obj["req"]}%'`, async function (error, results) {
+    db.query(`select loginId from users where tools like '%${obj["req"]}%'`, async function (error, results) {
         if (error) {
             console.log(`Error in database operation`)
             response.status(500).send('Error in database operation');
