@@ -10,10 +10,9 @@ async function getType() {
     var newReq = await confirm("Accept to enter requirement");
     if (newReq) {
         connId = await sendNewRequest(prompt("Enter tool required"), logid)
-        // console.log("conn id: ", connId)
     } else{
         connId = await getConnId(logid)
     }
 }
 
-setInterval(function () { getMessageF(logid) }, 2000);
+setInterval(function () { getMessage(logid) }, 2000);

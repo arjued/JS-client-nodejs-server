@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "8f75ec13-a24b-4fb6-baaa-401d486d5da1",
+		"name": "JS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "send",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"message\": \"test3\",\"loginId\": \"qa\", \"connId\":\"d42bc0f2eced7e5020c063f72235a1ab\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/sendMessage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"sendMessage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"loginId\": \"arj\"}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/getMessage",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"getMessage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCon",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"loginId\" : \"arj\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/getConnection",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"getConnection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"loginId\" : \"arjun\", \"req\" : \"spanner\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/newRequirement",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"newRequirement"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

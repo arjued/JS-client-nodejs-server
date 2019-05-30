@@ -27,7 +27,6 @@ async function newRequirement(request, response, db) {
     let obj = request.body;
     var hash
     var list = []
-    // console.log(obj)
     db.query(`select loginId from users where tool like '%${obj["req"]}%'`, async function (error, results) {
         if (error) {
             console.log(`Error in database operation`)
