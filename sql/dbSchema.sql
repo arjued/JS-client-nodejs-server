@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `chat` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `chat`;
 -- MySQL dump 10.13  Distrib 8.0.16, for Win64 (x86_64)
 --
 -- Host: localhost    Database: chat
@@ -44,7 +42,7 @@ CREATE TABLE `messages` (
   `sender` varchar(45) DEFAULT NULL,
   `connId` varchar(70) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=155 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=185 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -58,7 +56,7 @@ CREATE TABLE `users` (
   `loginId` varchar(45) NOT NULL,
   `userName` varchar(45) DEFAULT NULL,
   `contact` varchar(45) DEFAULT NULL,
-  `tool` varchar(45) DEFAULT NULL,
+  `tool` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`loginId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -80,4 +78,4 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-05-29 23:23:40
+-- Dump completed on 2019-05-30 14:52:20
